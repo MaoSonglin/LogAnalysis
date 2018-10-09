@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.songlin.mapper.ArticleMapper" >
+  <insert id="insert" parameterType="com.songlin.bean.Article">
+  	insert into article (count,id) values(#{count},#{id})
+  </insert>
+  
+  <delete id="deleteAll">
+  	delete from article
+  </delete>
+  <select id="listTop" parameterType="java.lang.Integer" resultType="com.songlin.bean.Article">
+  	select count,id from article limit #{top}
+  </select>
+</mapper>

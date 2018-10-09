@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<typeAliases> 
+		<!-- 定义单个pojo类别名
+		type:类的全路劲名称
+		alias:别名
+		 -->
+<!-- 		<typeAlias type="pojo.User" alias="user"/> -->
+		
+		<!-- 使用包扫描的方式批量定义别名 
+		定以后别名等于类名,不区分大小写,但是建议按照java命名规则来,首字母小写,以后每个单词的首字母大写
+		-->
+		<package name="com.songlin.bean"/>
+	</typeAliases>
+
+	<!-- 和spring整合后 environments配置将废除-->
+<!-- 	<environments default="development">
+		<environment id="development">
+		<transactionManager type="JDBC" />
+		<dataSource type="POOLED">
+			<property name="driver" value="com.mysql.jdbc.Driver" />
+			<property name="url" value="jdbc:mysql://localhost:3306/iqaa" />
+			<property name="username" value="root" />
+			<property name="password" value="123456" />
+		</dataSource>
+		</environment>
+	</environments>
+ -->	<mappers>
+		
+		
+		<!-- 
+			使用包扫面的方式批量导入映射文件
+		 -->
+	</mappers>
+</configuration>
